@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* Animación de terremoto para toda la pantalla */
+    @keyframes terremoto {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    .vibrar-pantalla {
+        /* Aplicamos la animación al cuerpo */
+        animation: terremoto 0.2s infinite;
+        overflow: hidden; /* Evita que aparezcan barras de scroll por el movimiento */
+        background-color: #f002; /* Un tinte rojo suave para el caos */
+    }
+    </style>
+</head>
+<body>
+    <header id="a">Esta sección es el encabezado</header>
+    <nav>sección de
+        <ul>
+            <li><a href="#">inicio</a></li>
+            <li><a href="#">pagina 2</a></li>
+            <li><a href="#">Pagina 3</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h3>Sección main es el contenido principal</h3>
+        <article>
+            <h3>Esto es un articulo</h3>
+            <h1>titulo 1</h1>
+            <h2>titulo 2</h2>
+            <h3>titulo 3</h3>
+            <p>...</p>
+            <h6>titulo 6</h6>
+        <p>sección de parrafo ahora puedo usar <strong>negrita</strong> u otros formatos <mark>por ejemplo el subrayado</mark> <sub>subindices</sub> etc no se trata de hacer una guía detallada</sub></p>
+        <hr>    
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt, suscipit corrupti veritatis beatae vel alias, odio labore dignissimos earum dolore deleniti accusamus at officiis eveniet eum nostrum error asperiores!</p>
+        </article>
+        <section>Esto es otra sección dentro del main</section>
+        <section>
+            <h3>Ahora pasamos a ver listas</h3>
+            <ul>
+                <p>Esto es una lista sin orden</p>
+                <li>elemento 1</li>
+                <ul>
+                    <li>Elemento 2.1</li>
+                    <ul>
+                        <li>elemento 2.1.1</li>
+                        <ul>
+                            <li>Elemento 2.1.1.1</li>
+                        </ul>
+                    </ul>
+                    <li>Elemento 2.2</li>
+                </ul>
+                <li>Elemento 3</li>
+            </ul>
+            <ol>
+                <li>A</li>
+                <li>B</li>
+                <ol>
+                    <li>C</li>
+                    <li>D</li>
+                </ol>
+                <li>E</li>
+            </ol>
+            <dl>
+                <p>Lista descriptiva:</p>
+                <dt>titulo elemento 1</dt>
+                <dd>descripción elemento 1</dd>
+            </dl>
+        </section>
+        <section>
+            <p>Sección de links</p>
+            <a href="#">Link a ningún sitio</a>
+            <a href="www.google.es">Link fuera de nuestra web</a>
+            <a href="www.google.es" target="_blank">Link externo pero en pestaña nueva</a>
+            <a href="#a">Link interno de la página a otra sección</a>
+            <a href="mailto:paco@gmail.com">envio de email</a>
+            <a href="tel:+34687789752">telefono</a>
+        </section>
+        <!-- comentario de una linea -->
+         <!-- comentario 
+         de 
+         varias 
+         lineas -->
+         <section>
+            <p id="b">Pasar el mouse por aquí para comprobar el script</p>
+            <p id="c">No pases el mouse por aquí</p>
+        </section>
+        <section>
+            <p>sección de inserción de medios</p>
+            <h3>imágenes</h3>
+            <img src="./HTML5/Estructura contenido.png" alt="" width="100px" loading="lazy">
+            <h3>LIENZO</h3>
+            <p>Aquí podemos insertar graficos, código o lo que sea, por ejemplo pintar pincha en la pizarra y ház un dibujo</p>
+            <canvas id="canva" width="300px" height="300px" style="border: 2px solid #333; cursor: crosshair; background: white;"></canvas>
+            <button onclick="limpiar()">Limpiar Pizarra</button>
+            <h3>Marcos</h3>
+            <p>incrustamos otras webs, codigo o lo que sea en nuestra web sin afectar a nuestro código</p>
+            <iframe src="https://www.wikipedia.org" width="100%" height="300"></iframe>
+            <br>
+            <div style="text-align: center;">
+                <h2>Juego del Dinosaurio 🦖</h2>
+                
+                <iframe 
+                    src="https://chromedino.com/" 
+                    width="600" 
+                    height="200" 
+                    style="border:none; overflow:hidden;" 
+                    scrolling="no">
+                </iframe>
+
+                <p>Haz clic dentro del marco y pulsa <b>Espacio</b> para saltar.</p>
+            </div>
+            <P>se pueden meter muchas más cosas como audio, video, SGV y modificarlo con javascript</P>
+        </section>
+        <section>
+            <h3>Llegamos a la sección de formularios</h3>
+            <p>Esta sección es muy importante</p>
+            <form action="" method="post">
+                <label>Nombre</label>
+                <br>
+                <input type="text" name="name" id="" required placeholder="perico">
+                <br>
+                <label>Edad</label>
+                <br>
+                <input type="number" name="age" id="">
+                <br>
+                <label for="">mail</label>
+                <br>
+                <input type="email" name="mail" id="" required>
+                <br>
+                <label for="">Satisfacción</label>
+                <br>
+                <input type="range" name="satisfaction" id="" min="0" max="100" value="50" oninput="valorActual.innerText = this.value">
+                <span id="valorActual">50</span>
+                <p>Elige uno</p>
+                <input type="radio" name="opcion" id="a">
+                <label for="a">A</label>
+                <input type="radio" name="opcion" id="b">
+                <label for="b">B</label>
+                <p>Selecciona</p>
+                <input type="checkbox" name="Elige" id="a">
+                <label for="a">A</label>
+                <input type="checkbox" name="Elige" id="b">
+                <label for="b">B</label>
+                <p>Agenda tu cita</p>
+                <input type="date" name="cita" id="">
+                <p>Añade algo de texto si quieres agreagar algo más</p>
+                <input type="text" name="texto" id="">
+                <br>
+                <input type="submit" value="enviar">
+            </form>
+        </section>
+    </main>
+    <aside><h3>Aquí tenemos el aside cada vez más en desuso por el uso del smartphone</h3></aside>
+    <footer><h3>Por ultimo tenemos el footer</h3></footer>
+    <!-- situar aquí los scripts para permitir que se renderice primero la página -->
+    <script>
+        // 1. Seleccionamos el elemento por su ID
+    const parrafo = document.getElementById('b');
+
+    // 2. Evento cuando el ratón entra
+    parrafo.addEventListener('mouseenter', () => {
+        parrafo.style.backgroundColor = '#4CAF50'; // Verde
+        parrafo.style.color = 'white';
+        parrafo.innerText = '¡Funciona perfectamente! ✨';
+    });
+
+    // 3. Evento cuando el ratón sale
+    parrafo.addEventListener('mouseleave', () => {
+        parrafo.style.backgroundColor = 'transparent';
+        parrafo.style.color = 'black';
+        parrafo.innerText = 'Pasa el ratón por aquí...';
+    });
+    </script>
+    <script>
+    const parraf = document.getElementById('c');
+    const cuerpo = document.body; // Seleccionamos toda la pantalla
+
+    parraf.addEventListener('mouseenter', () => {
+        cuerpo.classList.add('vibrar-pantalla');
+        parraf.innerText = "¡ESTÁ TEMBLANDO TODO! 😱";
+    });
+
+    parraf.addEventListener('mouseleave', () => {
+        cuerpo.classList.remove('vibrar-pantalla');
+        parraf.innerText = "⚠️ ¡PELIGRO: Pasa el mouse para activar el terremoto! ⚠️";
+    });
+</script>
+<script>
+        const canvas = document.getElementById('canva');
+        const ctx = canvas.getContext('2d'); // Aquí obtenemos las herramientas de dibujo
+        
+        let dibujando = false;
+
+        // Configuración del "pincel"
+        ctx.strokeStyle = '#2ecc71'; // Color verde
+        ctx.lineWidth = 5;           // Grosor del trazo
+        ctx.lineCap = 'round';       // Hace que el trazo sea suave y redondeado
+
+        // Funciones de dibujo
+        function empezarDibujo(e) {
+            dibujando = true;
+            dibujar(e); // Para poder hacer puntos con un solo clic
+        }
+
+        function detenerDibujo() {
+            dibujando = false;
+            ctx.beginPath(); // Reinicia la ruta para que no se unan trazos separados
+        }
+
+        function dibujar(e) {
+            if (!dibujando) return;
+
+            // Obtenemos la posición exacta del mouse dentro del canvas
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            ctx.lineTo(x, y); // Crea una línea hasta la posición del mouse
+            ctx.stroke();     // Dibuja la línea físicamente
+            ctx.beginPath();  // Empieza una nueva ruta
+            ctx.moveTo(x, y); // Mueve el "pincel" a la posición actual
+        }
+
+        function limpiar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // Eventos del mouse
+        canvas.addEventListener('mousedown', empezarDibujo);
+        canvas.addEventListener('mousemove', dibujar);
+        canvas.addEventListener('mouseup', detenerDibujo);
+        canvas.addEventListener('mouseout', detenerDibujo);
+    </script>
+
+</body>
+</html>
